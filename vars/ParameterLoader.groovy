@@ -1,6 +1,6 @@
 def generateParameters() {
     return [
-        choice(choices: ['debug', 'internalRelease', 'release'], description: 'Select build environment', name: 'BUILD_ENVIRONMENT'),
-        booleanParam(defaultValue: false, description: 'Enable design token', name: 'DesignToken'),
+        [type: 'choice', name: 'BUILD_ENVIRONMENT', choices: ['debug', 'internalRelease', 'release'], description: 'Select build environment'],
+        [type: 'booleanParam', name: 'DesignToken', defaultValue: false, description: 'Enable design token'],
     ]
 }
