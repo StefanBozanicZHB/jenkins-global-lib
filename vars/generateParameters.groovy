@@ -1,9 +1,6 @@
 def call() {
-    sh "echo Hello from RLM"
-
-    // booleanParam(defaultValue: false, description: "", name: "RlmTeam")
-    // booleanParam(defaultValue: false, description: "", name: "RlmClientTeam")
-    // booleanParam(defaultValue: false, description: "", name: "RlmClientDesign")
-    // booleanParam(defaultValue: true, description: "", name: "AndroidDev")
-    // booleanParam(defaultValue: true, description: "", name: "QaTeam")
+    return [
+        choice(name: 'BUILD_ENVIRONMENT', choices: ['debug', 'internalRelease', 'release'], description: 'Select build environment'),
+        booleanParam(name: 'DesignToken', defaultValue: false, description: 'Enable design token'),
+    ]
 }
