@@ -1,6 +1,7 @@
-def generateParameters() {
-    return [
-        booleanParam(defaultValue: false, description: "Sample boolean parameter", name: "MyBooleanParam"),
-        choice(choices: ["Option 1", "Option 2", "Option 3"], description: "Sample choice parameter", name: "MyChoiceParam")
-    ]
+def call() {
+    booleanParam(defaultValue: false, description: "", name: "RlmTeam")
+    booleanParam(defaultValue: false, description: "", name: "RlmClientTeam")
+    booleanParam(defaultValue: false, description: "", name: "RlmClientDesign")
+    booleanParam(defaultValue: true, description: "", name: "AndroidDev")
+    booleanParam(defaultValue: true, description: "", name: "QaTeam")
 }
